@@ -1,0 +1,9 @@
+package pro.inmost.amazon.chime.errors;
+
+public enum Error {
+    USER_NOT_FOUND,
+    CREDENTIALS_ARE_INCORRECT,
+    USER_WITH_PROVIDED_EMAIL_EXIST,
+    USER_WITH_PROVIDED_EMAIL_NOT_FOUND,
+    USER_IS_NOT_ACTIVATED
+}

@@ -1,0 +1,53 @@
+server:
+  port: 9004
+  error:
+    include-message: always
+spring:
+  application:
+    name: auth-service
+  datasource:
+    username: <your_username>
+    password: <your_password>
+    url: <your_url>
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+  freemarker:
+    template-loader-path: classpath:/templates
+    suffix: .ftl
+  # SENDGRID (SendGridAutoConfiguration)
+  sendgrid:
+    api-key: <your_send_grid_api_key>
+    username: <your_username>
+    password: <your_password>
+
+jwt:
+  secret: <your_secred>
+  expiration: 604800
+link:
+  for:
+    resetting:
+        password: <host>:8081/auth/reset-password
+    user:
+        verify: <host>:8081/auth/verify-user?code=
+email:
+  from: <your_email>
+
+# AWS IAM CREDS
+access:
+  key:
+    id: <your_aws_access_key_id>
+secret:
+  access:
+    key: <your_aws_access_key>
+app:
+  instance:
+    arn: <your_app_instance_arn>
+# CHIME ACCOUNT
+chime:
+  account:
+    id: <your_chime_account_id>
+aws:
+  account:
+    id: <your_aws_account_id>
+

@@ -1,0 +1,46 @@
+server:
+  port: 9003
+spring:
+  application:
+    name: messaging-service
+  datasource:
+    username: <your_username>
+    password: <your_password>
+    url: <your_database_url>
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+jwt:
+  secret: <your_secret>
+  expiration: 86400
+s3:
+    endpointUrl: https://s3.eu-west-3.amazonaws.com
+    accessKey: <your_access_key>
+    secretKey: <your_secret_key>
+    bucketName: <your_bucket_name>
+    region: eu-west-3
+    linkAvailabilityTime: 252000
+    maxSizeForFile: 5767168
+# AWS IAM CREDS
+access:
+  key:
+    id: <your_aws_access_key_id>
+secret:
+  access:
+    key: <your_aws_access_key>
+app:
+  instance:
+    arn: <your_app_instance_arn>
+# CHIME ACCOUNT
+chime:
+  account:
+    id: <your_chime_account_id>
+aws:
+  account:
+    id: <your_aws_account_id>
+# AWS V4 REQUEST SETTINGS
+service:
+  name: chime
+  region: us-east-1
+  host: http://node001.ue1.ws-messaging.chime.aws
+  endpoint: http://node001.ue1.ws-messaging.chime.aws/connect

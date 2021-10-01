@@ -1,0 +1,1 @@
+java -jar target/gateway-service-1.0.jar
